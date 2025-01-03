@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://tvw5yasenii1"]
+
+[ext_resource type="Script" path="res://car.gd" id="1_c2sjm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2fld"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.3, 0.3)
+
+[node name="Car" type="CharacterBody2D" parent="."]
+script = ExtResource("1_c2sjm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car"]
+shape = SubResource("RectangleShape2D_b2fld")
